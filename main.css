@@ -45,6 +45,7 @@ h3 {
 }
 
 div.rez {
+	margin: auto;
 	text-align: center;
 	padding: 16px 16px;
 }

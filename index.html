@@ -1,48 +1,278 @@
-<!doctype html>
-<html>
+<!-- Footer -->
+    <footer class="retro-footer">
+        <center>
+            <table border="1" cellpadding="10" width="100%" bgcolor="#404040">
+                <tr>
+                    <td>
+                        <font size="2" color="#00FFFF">
+                            © 2025 Your Name's Homepage | Best viewed at 800x600 resolution<br>
+                            <a href="mailto:you@email.com" style="color: #00AAFF;">📧 Email Me!</a> | 
+                            <a href="#" style="color: #00AAFF;">📝 Sign My Guestbook!</a> | 
+                            <a href="#" style="color: #00AAFF;">🔄 Last Updated: Today!</a><br<!DOCTYPE html>
+<html lang="en">
 <head>
-	
-
-<link rel="apple-touch-icon" sizes="180x180" href="/fav/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png">
-<link rel="manifest" href="/fav/site.webmanifest">
-<link rel="mask-icon" href="/fav/safari-pinned-tab.svg" color="#5bbad5">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#ffffff">
-<link href="main.css" rel="stylesheet" type "text/css" />
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name's Awesome Homepage!</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Visitor Counter -->
+    <div class="visitor-counter">
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="counter">
+        You are visitor #<span id="counter">001337</span>!
+    </div>
 
-<h1>
-<title>hydnme</title>
+    <!-- Header with blinking text -->
+    <header class="main-header">
+        <h1>★ Welcome to Your Name's CYBER SPACE! ★</h1>
+        <div class="blink">✨ UNDER CONSTRUCTION ✨</div>
+        <div class="marquee">
+            <span>♫ Now Playing: Some 2000s Song ♫ Check out my SICK projects! ♫ Email me! ♫ Sign my guestbook! ♫</span>
+        </div>
+    </header>
 
-			<center>
-		<a href="index.html"><img BORDER="0" src="https://i.imgur.com/Jog6c6Q.png" width="350" height="350"> </a>
-			</center>
-</h1>
+    <!-- Navigation with frames look -->
+    <nav class="retro-nav">
+        <table border="2" cellpadding="5" cellspacing="0" width="100%">
+            <tr bgcolor="#000080">
+                <td align="center">
+                    <font color="white" size="2">
+                        <a href="#" data-section="home" class="nav-link active">🏠 HOME</a> |
+                        <a href="#" data-section="about" class="nav-link">👤 ABOUT ME</a> |
+                        <a href="#" data-section="projects" class="nav-link">💻 MY PROJECTS</a> |
+                        <a href="#" data-section="links" class="nav-link">🔗 COOL LINKS</a>
+                    </font>
+                </td>
+            </tr>
+        </table>
+    </nav>
 
-	<center>
-<nav>
-	<ul>
-		<li><a href="page2.html">ABOUT</a></li>
-		<li><a href="page3.html">DATA</a></li>
-		<li><a href="page4.html">TOOLS</a></li>
-		<li><a href="https://github.com/haydnvn">GITHUB</a></li>
-	</ul>
-</nav>
-	</center>
+    <!-- Home Section -->
+    <section id="home" class="retro-section active">
+        <center>
+            <h2>♦ WELCOME TO MY HOMEPAGE! ♦</h2>
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="spinning skull" class="spinning-gif" style="width: 50px; height: 50px; background: url('data:image/svg+xml,<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 50 50\"><circle cx=\"25\" cy=\"25\" r=\"20\" fill=\"%23ff0000\" stroke=\"%23000\" stroke-width=\"2\"/><text x=\"25\" y=\"30\" text-anchor=\"middle\" fill=\"white\" font-size=\"20\">☠</text></svg>'); animation: spin 2s linear infinite;">
+            
+            <table border="3" cellpadding="10" cellspacing="5" bgcolor="#4a4a2a" width="80%">
+                <tr>
+                    <td>
+                        <font face="Courier New" size="4" color="#00FF41">
+                            <b>GREETINGS, FELLOW NETIZEN!</b><br><br>
+                            Welcome to my totally RADICAL website! I'm a <blink>SOFTWARE DEVELOPER</blink> 
+                            who loves to code and surf the information superhighway!<br><br>
+                            This site is best viewed in Netscape Navigator or Internet Explorer 6.0+
+                        </font>
+                    </td>
+                </tr>
+            </table>
+            
+            <br>
+            <button class="retro-button" onclick="showSection('projects')">
+                ► CHECK OUT MY L33T PROJECTS! ◄
+            </button>
+        </center>
+    </section>
 
+    <!-- About Section -->
+    <section id="about" class="retro-section">
+        <center>
+            <h2>♠ ALL ABOUT ME! ♠</h2>
+            
+            <table border="2" cellpadding="15" width="90%" bgcolor="#4a4a4a">
+                <tr>
+                    <td width="30%" valign="top">
+                        <center>
+                            <div class="profile-frame">
+                                <font color="#80FF80" size="2">MY PICTURE:</font><br>
+                                <div class="retro-photo">
+                                    📷<br>Your Photo<br>Here!
+                                </div>
+                            </div>
+                            
+                            <br>
+                            <table border="1" cellpadding="5" bgcolor="#4a4a3a" width="100%">
+                                <tr bgcolor="#4a1e4a">
+                                    <td><font color="white"><b>STATS:</b></font></td>
+                                </tr>
+                                <tr><td><font color="#80FF80">Name: Your Name</font></td></tr>
+                                <tr><td><font color="#80FF80">Age: 20-something</font></td></tr>
+                                <tr><td><font color="#80FF80">Location: Cyberspace</font></td></tr>
+                                <tr><td><font color="#80FF80">Status: Coding!</font></td></tr>
+                            </table>
+                        </center>
+                    </td>
+                    <td valign="top">
+                        <font face="Courier New" size="3" color="#B0FFB0">
+                            <h3 style="color: #00FF41;">Hey there, cyber-friend!</h3>
+                            I'm a software developer who's totally obsessed with creating AWESOME programs! 
+                            I spend my days writing code, browsing forums, and drinking way too much Mountain Dew. 
+                            When I'm not glued to my CRT monitor, you can find me playing video games or 
+                            chatting on IRC!<br><br>
+                            
+                            <b style="color: #80FF80;">My Skills Include:</b><br>
+                            <div class="skill-pills">
+                                <span class="skill-pill">HTML</span>
+                                <span class="skill-pill">CSS</span>
+                                <span class="skill-pill">JavaScript</span>
+                                <span class="skill-pill">Java</span>
+                                <span class="skill-pill">C++</span>
+                                <span class="skill-pill">PHP</span>
+                                <span class="skill-pill">MySQL</span>
+                                <span class="skill-pill">Flash</span>
+                            </div>
+                            
+                            <br><br>
+                            <b style="color: #80FF80;">My Favorite Things:</b><br>
+                            <font color="#00FF41">★ Programming<br>
+                            ★ Video Games<br>
+                            ★ Anime<br>
+                            ★ Pizza<br>
+                            ★ The Matrix<br></font>
+                        </font>
+                    </td>
+                </tr>
+            </table>            <b style="color: #00FFFF;">My Favorite Things:</b><br>
+                            <font color="#00FF00">★ Programming<br>
+                            ★ Video Games<br>
+                            ★ Anime<br>
+                            ★ Pizza<br>
+                            ★ The Matrix<br></font>
+                        </font>
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </section>
 
+    <!-- Projects Section -->
+    <section id="projects" class="retro-section">
+        <center>
+            <h2>☆ MY TOTALLY RAD PROJECTS! ☆</h2>
+            
+            <table border="3" cellpadding="10" width="95%">
+                <tr bgcolor="#008080">
+                    <td colspan="2">
+                        <font color="white" size="4"><b>★ PROJECT SHOWCASE ★</b></font>
+                    </td>
+                </tr>
+                <tr>
+                    <td bgcolor="#E0E0E0" width="50%" valign="top">
+                        <div class="project-box">
+                            <h3>🔥 PROJECT #1: SUPER COOL APP 🔥</h3>
+                            <div class="tech-badges">
+                                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Made with HTML" class="tech-badge" style="background: #ff4444; color: white; padding: 2px 5px; margin: 2px;">HTML
+                                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="CSS Powered" class="tech-badge" style="background: #4444ff; color: white; padding: 2px 5px; margin: 2px;">CSS
+                                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="JavaScript" class="tech-badge" style="background: #ffff44; color: black; padding: 2px 5px; margin: 2px;">JS
+                            </div>
+                            <p>This is my AWESOME web application that does really cool stuff! 
+                            It's got animations, sounds, and everything!</p>
+                            <a href="#" class="retro-link">► VIEW PROJECT ◄</a>
+                            <a href="#" class="retro-link">► SOURCE CODE ◄</a>
+                        </div>
+                    </td>
+                    <td bgcolor="#E0E0E0" width="50%" valign="top">
+                        <div class="project-box">
+                            <h3>💾 PROJECT #2: DATABASE THING 💾</h3>
+                            <div class="tech-badges">
+                                <span style="background: #44ff44; color: black; padding: 2px 5px; margin: 2px;">PHP</span>
+                                <span style="background: #ff8844; color: white; padding: 2px 5px; margin: 2px;">MySQL</span>
+                            </div>
+                            <p>A super advanced database application with user login and everything! 
+                            Features include data storage and retrieval!</p>
+                            <a href="#" class="retro-link">► VIEW PROJECT ◄</a>
+                            <a href="#" class="retro-link">► SOURCE CODE ◄</a>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td bgcolor="#E0E0E0" width="50%" valign="top">
+                        <div class="project-box">
+                            <h3>🎮 PROJECT #3: GAME ENGINE 🎮</h3>
+                            <div class="tech-badges">
+                                <span style="background: #8844ff; color: white; padding: 2px 5px; margin: 2px;">C++</span>
+                                <span style="background: #ff4488; color: white; padding: 2px 5px; margin: 2px;">OpenGL</span>
+                            </div>
+                            <p>My attempt at creating the next big game engine! 
+                            Still working on the graphics but it compiles!</p>
+                            <a href="#" class="retro-link">► VIEW PROJECT ◄</a>
+                            <a href="#" class="retro-link">► SOURCE CODE ◄</a>
+                        </div>
+                    </td>
+                    <td bgcolor="#E0E0E0" width="50%" valign="top">
+                        <div class="project-box">
+                            <h3>🌐 PROJECT #4: MY BLOG 🌐</h3>
+                            <div class="tech-badges">
+                                <span style="background: #44ffff; color: black; padding: 2px 5px; margin: 2px;">Blogger</span>
+                                <span style="background: #ffff88; color: black; padding: 2px 5px; margin: 2px;">HTML</span>
+                            </div>
+                            <p>My personal blog where I write about programming, life, 
+                            and my thoughts on the latest tech trends!</p>
+                            <a href="#" class="retro-link">► READ BLOG ◄</a>
+                            <a href="#" class="retro-link">► RSS FEED ◄</a>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </section>
 
-<footer>
-		<center>
-	<p>
-	Website Created by: Haydn Van Norman <br> Copyright 2022
-	</p>
-		</center>
-</footer>
+    <!-- Links Section -->
+    <section id="links" class="retro-section">
+        <center>
+            <h2>♣ AWESOME LINKS! ♣</h2>
+            
+            <table border="2" cellpadding="10" bgcolor="#404000" width="80%">
+                <tr bgcolor="#663300">
+                    <td><font color="white" size="3"><b>MY FAVORITE SITES:</b></font></td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="#" class="retro-link">► Google (Best Search Engine!)</a><br>
+                        <a href="#" class="retro-link">► SourceForge (Download Software!)</a><br>
+                        <a href="#" class="retro-link">► Slashdot (News for Nerds!)</a><br>
+                        <a href="#" class="retro-link">► W3Schools (Learn HTML!)</a><br>
+                        <a href="#" class="retro-link">► GameFAQs (Game Guides!)</a><br>
+                        <a href="#" class="retro-link">► DeviantArt (Cool Art!)</a><br>
+                    </td>
+                </tr>
+            </table>
+            
+            <br>
+            
+            <table border="1" cellpadding="5" bgcolor="#004000">
+                <tr>
+                    <td>
+                        <font size="2" color="#00FF00">
+                            <b>Webrings:</b><br>
+                            ◄ Previous | <a href="#" style="color: #00AAFF;">Random</a> | Next ►<br>
+                            Join the "Cool Programmers" webring!
+                        </font>
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </section>
 
+    <!-- Footer -->
+    <footer class="retro-footer">
+        <center>
+            <table border="1" cellpadding="10" width="100%" bgcolor="#C0C0C0">
+                <tr>
+                    <td>
+                        <font size="2">
+                            © 2025 Your Name's Homepage | Best viewed at 800x600 resolution<br>
+                            <a href="mailto:you@email.com">📧 Email Me!</a> | 
+                            <a href="#">📝 Sign My Guestbook!</a> | 
+                            <a href="#">🔄 Last Updated: Today!</a><br>
+                            <div class="blink">*** This site is UNDER CONSTRUCTION! ***</div>
+                        </font>
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

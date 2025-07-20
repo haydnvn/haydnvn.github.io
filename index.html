@@ -1,48 +1,237 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-	
-
-<link rel="apple-touch-icon" sizes="180x180" href="/fav/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png">
-<link rel="manifest" href="/fav/site.webmanifest">
-<link rel="mask-icon" href="/fav/safari-pinned-tab.svg" color="#5bbad5">
-<meta name="msapplication-TileColor" content="#da532c">
-<meta name="theme-color" content="#ffffff">
-<link href="main.css" rel="stylesheet" type "text/css" />
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haydn Van Norman - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">Haydn Van Norman</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
 
-<h1>
-<title>hydnme</title>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Hi, I'm <span class="accent-text" id="typed-name">Haydn</span>
+                </h1>
+                <p class="hero-subtitle" id="typed-subtitle"></p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-scroll">
+                <div class="scroll-indicator">
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-			<center>
-		<a href="index.html"><img BORDER="0" src="https://i.imgur.com/Jog6c6Q.png" width="350" height="350"> </a>
-			</center>
-</h1>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title fade-in">About Me</h2>
+            <div class="about-content">
+                <div class="about-text fade-in">
+                    <p>
+                        I'm a passionate programmer and Computer Science graduate with 3+ years of professional
+                        experience
+                        across various industries. I thrive on building innovative solutions that solve real-world
+                        problems.
+                        Currently, I'm actively applying AI to different scenarios and exploring where operational
+                        efficiencies can be made across various processes.
+                    </p>
+                    <p>
+                        What excites me most is how AI is transforming the way we work by dramatically speeding up
+                        processes
+                        that once took hours or days. I believe AI's ability to automate complex workflows and
+                        accelerate
+                        decision-making is the key to unlocking unprecedented efficiency across all industries, and I'm
+                        eager to be part of building these game-changing solutions.
+                    </p>
+                </div>
+                <div class="skills fade-in">
+                    <h3>Skills & Technologies</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">Python</div>
+                        <div class="skill-item">Data Analysis</div>
+                        <div class="skill-item">SQL</div>
+                        <div class="skill-item">Machine Learning</div>
+                        <div class="skill-item">Excel/VBA</div>
+                        <div class="skill-item">Prompt Engineering</div>
+                        <div class="skill-item">AI Integration</div>
+                        <div class="skill-item">Web Scraping</div>
+                        <div class="skill-item">AWS</div>
+                        <div class="skill-item">Automation</div>
+                        <div class="skill-item">Data Visualization</div>
+                        <div class="skill-item">Agile Development</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-	<center>
-<nav>
-	<ul>
-		<li><a href="page2.html">ABOUT</a></li>
-		<li><a href="page3.html">DATA</a></li>
-		<li><a href="page4.html">TOOLS</a></li>
-		<li><a href="https://github.com/haydnvn">GITHUB</a></li>
-	</ul>
-</nav>
-	</center>
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title fade-in">Featured Projects</h2>
+            <div class="projects-grid">
+                <a href="https://github.com/haydnvn" target="_blank" class="project-card-link">
+                    <div class="project-card fade-in">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <i class="fas fa-external-link-alt"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Easy Video Maker</h3>
+                            <p class="project-description">
+                                Scrapes Reddit submissions and transforms them into video content with automated
+                                compilation. Produces 8 videos per hour per CPU core for social media automation.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Reddit API</span>
+                                <span class="tech-tag">MoviePy</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
 
+                <a href="https://github.com/haydnvn" target="_blank" class="project-card-link">
+                    <div class="project-card fade-in">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <i class="fas fa-external-link-alt"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Reddit News Bot</h3>
+                            <p class="project-description">
+                                Monitors websites for MapleStory news and automatically posts new content to the
+                                MapleStory
+                                subreddit with proper formatting. Prevents duplicate posts through intelligent tracking.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Selenium</span>
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">PRAW</span>
+                                <span class="tech-tag">Remote Hosting</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
 
+                <a href="https://github.com/haydnvn" target="_blank" class="project-card-link">
+                    <div class="project-card fade-in">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <i class="fas fa-external-link-alt"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Discord Steam Marketplace Bot</h3>
+                            <p class="project-description">
+                                Multi-server Discord bot that fetches real-time Steam market prices. Used across 150+
+                                servers
+                                with search functionality for any Steam MapleStory marketplace item.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Discord.py</span>
+                                <span class="tech-tag">Steam API</span>
+                                <span class="tech-tag">Python</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
 
-<footer>
-		<center>
-	<p>
-	Website Created by: Haydn Van Norman <br> Copyright 2022
-	</p>
-		</center>
-</footer>
+                <a href="https://store.steampowered.com/app/3506430/Peak/" target="_blank" class="project-card-link">
+                    <div class="project-card fade-in">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <i class="fas fa-external-link-alt"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Peak Idle Game</h3>
+                            <p class="project-description">
+                                Desktop pet idle game featuring martial artist training with luck-based progression
+                                system.
+                                Successfully sold 1000+ units on Steam with integrated Steamworks features.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Godot</span>
+                                <span class="tech-tag">Steamworks</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
 
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title fade-in">Let's Connect</h2>
+            <div class="contact-content fade-in">
+                <p class="contact-text">
+                    I'm always interested in new opportunities and collaborations.
+                    Feel free to reach out if you'd like to work together!
+                </p>
+                <div class="contact-links">
+                    <a href="mailto:Haydn@hydn.me" class="contact-link">
+                        <i class="fas fa-envelope"></i>
+                        <span>Haydn@hydn.me</span>
+                    </a>
+                    <a href="https://github.com/haydnvn" class="contact-link" target="_blank">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Haydn Van Norman. Built with ❤️ and hosted on GitHub Pages.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
+
 </html>

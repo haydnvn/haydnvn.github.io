@@ -1,157 +1,163 @@
-// 2000s Internet JavaScript with all the classic effects!
+// Mobile Navigation Toggle
+const hamburger = document.querySelector('.hamburger');
+const navMenu = document.querySelector('.nav-menu');
 
-// Visitor counter that increments
-let visitorCount = parseInt(localStorage.getItem('visitorCount') || '1337');
-visitorCount++;
-localStorage.setItem('visitorCount', visitorCount.toString());
-document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('counter').textContent = visitorCount.toString().padStart(6, '0');
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
 });
 
-// Navigation functionality with 2000s flair
-function showSection(sectionName) {
-    // Hide all sections with fade effect
-    const sections = document.querySelectorAll('.retro-section');
+// Close mobile menu when clicking on a link
+document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+    hamburger.classList.remove('active');
+    navMenu.classList.remove('active');
+}));
+
+// Typing Animation
+const typedName = document.getElementById('typed-name');
+const typedSubtitle = document.getElementById('typed-subtitle');
+
+const subtitleText = "AI Engineer & Software Developer";
+
+function typeWriter(element, text, speed = 100) {
+    let i = 0;
+    element.innerHTML = '';
+    
+    function type() {
+        if (i < text.length) {
+            element.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(type, speed);
+        }
+    }
+    
+    type();
+}
+
+// Start typing animation after page loads
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        typeWriter(typedSubtitle, subtitleText, 80);
+    }, 2000);
+});
+
+// Smooth Scrolling for Navigation Links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            const offsetTop = target.offsetTop - 80; // Account for fixed navbar
+            window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    });
+});
+
+// Scroll Animations
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, observerOptions);
+
+// Observe all fade-in elements
+document.querySelectorAll('.fade-in').forEach(el => {
+    observer.observe(el);
+});
+
+// Navbar Background on Scroll
+window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 100) {
+        navbar.style.background = 'rgba(10, 10, 10, 0.98)';
+    } else {
+        navbar.style.background = 'rgba(10, 10, 10, 0.95)';
+    }
+});
+
+// Active Navigation Link Highlighting
+window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    let current = '';
     sections.forEach(section => {
-        section.style.display = 'none';
-        section.classList.remove('active');
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (window.scrollY >= (sectionTop - 200)) {
+            current = section.getAttribute('id');
+        }
     });
 
-    // Show target section
-    const targetSection = document.getElementById(sectionName);
-    if (targetSection) {
-        targetSection.style.display = 'block';
-        targetSection.classList.add('active');
-        
-        // Add some retro transition effect
-        targetSection.style.opacity = '0';
-        setTimeout(() => {
-            targetSection.style.opacity = '1';
-            targetSection.style.transition = 'opacity 0.5s ease-in-out';
-        }, 50);
-    }
-
-    // Update navigation active state
-    const navLinks = document.querySelectorAll('.nav-link');
     navLinks.forEach(link => {
         link.classList.remove('active');
-        if (link.getAttribute('data-section') === sectionName) {
+        if (link.getAttribute('href') === `#${current}`) {
             link.classList.add('active');
         }
     });
-
-    // Play a sound effect (if we had one)
-    console.log('*BEEP BOOP* Navigating to ' + sectionName + '!');
-}
-
-// Add click listeners to navigation links
-document.addEventListener('DOMContentLoaded', function() {
-    const navLinks = document.querySelectorAll('.nav-link');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const section = this.getAttribute('data-section');
-            if (section) {
-                showSection(section);
-            }
-        });
-    });
-
-    // Random retro effects
-    addRetroEffects();
-    
-    // Easter eggs
-    addEasterEggs();
-    
-    // Konami code support
-    addKonamiCode();
 });
 
-// Add random retro effects
-function addRetroEffects() {
-    // Random sparkle effect on mouse move
-    document.addEventListener('mousemove', function(e) {
-        if (Math.random() < 0.05) { // 5% chance
-            createSparkle(e.clientX, e.clientY);
-        }
+// Parallax Effect for Hero Section
+window.addEventListener('scroll', () => {
+    const scrolled = window.pageYOffset;
+    const hero = document.querySelector('.hero');
+    const rate = scrolled * -0.5;
+    
+    if (hero) {
+        hero.style.transform = `translateY(${rate}px)`;
+    }
+});
+
+// Project Card Hover Effects handled by CSS
+
+// Skill Items Animation Delay
+document.querySelectorAll('.skill-item').forEach((skill, index) => {
+    skill.style.animationDelay = `${index * 0.1}s`;
+});
+
+// Contact Links Hover Effect
+document.querySelectorAll('.contact-link').forEach(link => {
+    link.addEventListener('mouseenter', function() {
+        const icon = this.querySelector('i');
+        icon.style.transform = 'scale(1.2) rotate(5deg)';
     });
     
-    // Random popup messages
-    setTimeout(() => {
-        if (Math.random() < 0.3) { // 30% chance
-            alert('Welcome to my AWESOME homepage! Don\'t forget to sign my guestbook! 😎');
-        }
-    }, 5000);
-    
-    // Status bar messages
-    const statusMessages = [
-        "Loading... Please wait...",
-        "Welcome to cyberspace!",
-        "You've got mail!",
-        "Connection established",
-        "Browsing the information superhighway...",
-        "Error 404: Coolness not found... just kidding! 😉"
-    ];
-    
-    let messageIndex = 0;
-    setInterval(() => {
-        window.status = statusMessages[messageIndex];
-        messageIndex = (messageIndex + 1) % statusMessages.length;
-    }, 3000);
-}
+    link.addEventListener('mouseleave', function() {
+        const icon = this.querySelector('i');
+        icon.style.transform = 'scale(1) rotate(0deg)';
+    });
+});
 
-// Create sparkle effect
-function createSparkle(x, y) {
-    const sparkle = document.createElement('div');
-    sparkle.innerHTML = '✨';
-    sparkle.style.position = 'fixed';
-    sparkle.style.left = x + 'px';
-    sparkle.style.top = y + 'px';
-    sparkle.style.pointerEvents = 'none';
-    sparkle.style.fontSize = '16px';
-    sparkle.style.zIndex = '9999';
-    sparkle.style.animation = 'sparkle-fade 1s ease-out forwards';
-    
-    document.body.appendChild(sparkle);
-    
-    setTimeout(() => {
-        if (sparkle.parentNode) {
-            sparkle.parentNode.removeChild(sparkle);
-        }
-    }, 1000);
-}
+// Add loading animation
+window.addEventListener('load', () => {
+    document.body.classList.add('loaded');
+});
 
-// Add sparkle animation CSS
-const sparkleStyle = document.createElement('style');
-sparkleStyle.textContent = `
-    @keyframes sparkle-fade {
-        0% { 
-            opacity: 1; 
-            transform: scale(0) rotate(0deg); 
-        }
-        50% { 
-            opacity: 1; 
-            transform: scale(1) rotate(180deg); 
-        }
-        100% { 
-            opacity: 0; 
-            transform: scale(0) rotate(360deg); 
-        }
+
+
+
+
+// Add CSS for cursor trail
+const style = document.createElement('style');
+style.textContent = `
+
+    
+    .nav-link.active {
+        color: #00FF00;
+    }
+    
+    .nav-link.active::after {
+        width: 100%;
     }
 `;
-document.head.appendChild(sparkleStyle);
-
-// Easter eggs for the true 2000s experience
-function addEasterEggs() {
-    // Secret message in console
-    console.log('%c🌟 Welcome to the Matrix, Neo! 🌟', 'color: #00ff00; font-size: 20px; font-weight: bold;');
-    console.log('%cYou found the secret developer console! You must be a real hacker! 😎', 'color: #ff0000; font-size: 14px;');
-    console.log('%c~ Type "showSecret()" for a surprise ~', 'color: #0000ff; font-style: italic;');
-    
-    // Global function for console easter egg
-    window.showSecret = function() {
-        alert('🎉 CONGRATULATIONS! 🎉\n\nYou discovered the secret developer message!\nYou are truly a master of the cyber arts!\n\n~ Welcome to the elite hackers club ~');
-        
-        // Change background temporarily
-        const originalBg = document.body.style.background;
-        document.body.style.background = 'url("data:image/svg+xml,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\'><rect width=\'100\' height=\'100\' fill=\'%23000\'/><text x=\'50\' y=\'50\' text-anchor=\'middle\' fill=\'%2300ff00\' font-size=\'10\'>MATRIX</text>
+document.head.appendChild(style);
